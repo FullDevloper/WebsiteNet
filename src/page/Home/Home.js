@@ -1,10 +1,26 @@
 import React,{useState} from 'react'
 import style from "./Home.module.css";
+import { Link, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import {Swiper,SwiperSlide}from "swiper/react";
+import { Autoplay,Pagination,Navigation } from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 const Home = () => {
+    const location=useLocation()
+   const BackData=[{image:"1"},{image:"2"},{image:"2"},{image:"2"},{image:"2"}]
     const imageData=[{image:`GOLD-LOGO.png`,title:"ХӨРӨНГӨ ОРУУЛАЛТ"},{image:"logo-blue(1).png",title:"БАРИЛГА ТОНОГ ТӨХӨӨРӨМЖ ХУДАЛДАА"},{image:"logo-orenga.png",title:"БАРИЛГА МАТЕРИАЛ ХУДАЛДАА"},{image:"muuun.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"}]
-    const CompanyData=[{image:`GOLD-LOGO.png`,title:"ХӨРӨНГӨ ОРУУЛАЛТ"},{image:"logo-blue(1).png",title:"БАРИЛГА ТОНОГ ТӨХӨӨРӨМЖ ХУДАЛДАА"},{image:"logo-orenga.png",title:"БАРИЛГА МАТЕРИАЛ ХУДАЛДАА"},{image:"muuun.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"}]
-    const [noElement,setOffElement]=useState(4);
-    const slice=CompanyData.slice(0,4);
+    const CompanyData=[{image:`GOLD-LOGO.png`,title:"ХӨРӨНГӨ ОРУУЛАЛТ",id:1},{image:"logo-blue(1).png",title:"БАРИЛГА ТОНОГ ТӨХӨӨРӨМЖ ХУДАЛДАА",id:1},{image:"logo-orenga.png",title:"БАРИЛГА МАТЕРИАЛ ХУДАЛДАА",id:1},{image:"muuun.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ",id:1},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"},{image:"logo-hoh.png",title:"ЗУУЧ ХАУС ГАЗАР ХӨРӨНГӨ"}]
+    const navigate=useNavigate();  
+    // <Link to={`/home/buteegdehuun/${data.id}`}>Дэлгэрэнгүй</Link> 
+    const handleClick=(id,pathname)=>{
+        console.log(id)
+        console.log(location.pathname)
+        navigate(`/home/buteegdehuun/${id}`)
+
+
+    }
     return (
     <div className={style.Container}>
     <div className={style.TextContainer}>
@@ -29,36 +45,42 @@ const Home = () => {
     }
       
       </div>
+
   
     <div className={style.ImContainer}>
-    {
-    
-    }
+
         {
-            slice.map((data)=>{
-                return (
-                    <div className={style.SectionContainer}>
-                    <div className={style.SectionImage}>
-                    <div className={style.Images}>Зураг</div>
+            
+          CompanyData &&  CompanyData.map((data)=>{
+            return (
+                <div className={style.SectionContainer}>
+                    <div className={style.SectionImageContainer}>
+                        <div className={style.SectionImage}></div>
                     
                     </div>
-                    <div className={style.SectionImageCont}>
-                    <div className={style.SectionText}>
-                        <div className={style.SectionLogo}><img src={require(`../../img/${data.image}`)} style={{display:"flex",alignItems:"center",width:"100%",height:"100%"}}/></div>
-                        <div className={style.SectionTitle}><span>{data.title}</span>
+                    <div className={style.SectionIconAndText}>
+                        <div className={style.SectionIconAndbtn}>
+                        <div className={style.SectionImageIcon}>
+                        <img src={require(`../../img/${data.image}`)} style={{display:"flex",alignItems:"center",width:"100%",height:"100%"}}/>
+                        </div>
                         
+                        <div className={style.SectionTitle}>
+                        <div className={style.Text}><span>{data.title}</span></div>
+                        <div className={style.Btn}> <button onClick={()=>{handleClick(data.id)}}>Дэлгэрэнгүй</button></div>
+                        
+                     
+                       
+                        </div>
                         
                         </div>
-                       
                     </div>
-                    </div>
-                    
-                    </div>
+                </div>
+            )
+          
+        })}
+    
+        
 
-                )
-                
-            })
-        }
         
     <div >
 
@@ -66,24 +88,7 @@ const Home = () => {
     </div>
     
     </div>
-    <div className={style.ImContainer}>
-    {
-        slice.map((data)=>{
-            return (
-                <div className={style.SectionContainer}>
-                <div>2</div>
-                </div>
 
-            )
-            
-        })
-    }
-<div >
-
-
-</div>
-
-</div>
           </div>
   )
 }

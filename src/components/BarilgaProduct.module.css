@@ -1,0 +1,111 @@
+.Container{
+    height: 100vh;
+    background-color: rgb(255, 255, 18);
+
+}
+.TextBox{
+    display: flex;
+    flex-direction:row;
+height: 15%;
+/* background-color: aqua; */
+    padding: 20px;
+}
+.Text{
+  
+    background-color: black;
+    width: 40%;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+
+    
+}
+.Text h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+
+}
+.TextHr hr{
+    display: flex;
+  
+    align-items: center;
+    justify-items: center;
+   background-color: black;
+   border: 1px solid black;
+   width: 60%;
+}
+.TextHr{
+    /* background-color: aqua; */
+    display: flex;
+    /* background-color: white; */
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    
+
+    
+}
+.Hr{
+    border: 1px solid black;
+    width: 100%;
+}
+.ImContainer{
+    height:80%;
+    
+
+    
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+   
+    
+
+    grid-template-columns: repeat(4,300px);
+    
+    width: 100%;
+}
+.ProductContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+   
+}
+.TextImageCont{
+    margin: 20px;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 100%;
+}
+.HeaderImage{
+    border-radius: 10px;
+    height: 75%;
+    width: 100%;
+   text-align: center;
+    background-color: antiquewhite;
+}
+.Title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Title span{
+    width: 80%;
+    display: flex;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+   
+}
+.Title span
+{
+    color: black;
+}
