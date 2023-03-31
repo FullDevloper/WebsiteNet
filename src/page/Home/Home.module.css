@@ -31,7 +31,7 @@ justify-content: center;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 220px;
+    padding-top: 200px;
 }
 .SpanText{
     display: flex;
@@ -44,24 +44,23 @@ justify-content: center;
 
 }
 .SpanContainer{
-    padding-top: 20px;
+    padding-top: 0px;
     width: 100%;
     text-align: center;
     justify-content: center;
     display: flex;
     
 }
+
 .LogoContainer{
     display: flex;
-    height: 80vh;
-    justify-content: space-between;
+    
+    height: 100%;
+ 
 background-color: #c2c2c2;
     
 }
-.LogoContainer:nth-child(1){
 
-    background-color: aqua;
-}
 .Logo{
     display: flex;
     flex-direction: column;
@@ -98,75 +97,111 @@ background-color: #c2c2c2;
     flex-direction: row;
 } */
 .ImContainer{
-    height: 100vh;
+    height:auto;
+    
     background-color: #c1c9c9;
-    padding:20px;
-    display: flex;
-    padding-top: -90px;
+    
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+
+    grid-template-columns: repeat(4,300px);
+
     width: 100%;
 }
 .SectionContainer{
-    height: 70%;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+    background-color: aqua;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
     margin: 20px;
-    width: 100%;
-    background-color: aliceblue;
-    border-top-left-radius: 20px;
-
-    border-bottom-right-radius: 20px;
+    width: auto;
+    height: 69vh;
 }
-.SectionImage{
-    height: 100vh;
-    width: 100%;
-    padding: 25px;
-}
-.Images{
-    border-top-left-radius: 20px;
-text-align: center;
-display: flex;
-align-items: center;
-justify-content: center;
-    border-bottom-right-radius: 20px;
-    height: 100%;
-    width: 100%;
-    
-    background-color: white;
-
-}
-.SectionLogo{
-
-    display: flex;
-    align-items: center;
-    width: 39%;
-
-    padding-left: 10px;
-    /* background-color: aqua; */
-}
-.ImContainer:nth-child(2){
+.SectionImageContainer{
+height: 82%;
 padding: 10px;
 }
-.SectionText{
-    display: flex;
-    
-    
-
+.SectionImage{
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
     height: 100%;
+    background-color: white;
 }
-.SectionImageCont{
-    height: 40%;
-    
+.SectionIconAndText{
+
+    /* height: 100%; */
+    height: 18%;
+   
+ 
+}
+.SectionIconAndbtn{
+    /* background-color: #3333; */
+  
+    display: flex;
+
+    width: 100%;
+    height: 96%;
 }
 .SectionTitle{
+    color: white;
     display: flex;
-    padding-left: 12px;
+    flex-direction: column;
     
-    align-items: center;
-
-    background-color: azure;
-    width: 100%;
+ 
+    height: 100%;
+ 
+    width: 70%;
 }
 .SectionTitle span{
-    font-size: 11px;
+    font-size: 12px;
+}
+.SectionImageIcon{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    padding-left: 10px;
+}
+.Text{
+    height: 80%;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+   
+}
+.Btn{
+ padding-left: 20px;
+
+  height: 100%;
+
+
+}
+.Btn button{
+   
+    display: flex;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    width: 50%;
+    
+    background-color: 10px;
+   cursor: pointer;
+}
+.Footer{
+    height: 100%;
+    background-color: white;
+}
+.BackContainer{
+
+    height: 100%;
+    background-color: aqua;
+    width: 100%;
+ 
+    /* display: grid; */
+    /* display: flex;
+    grid-template-columns: repeat(4,300px); */
+    /* grid-template-columns: repeat(4,40px);  */
 }
